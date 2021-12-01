@@ -59,7 +59,7 @@ const articleDiv = document.querySelector('.articles');
     expandButton.textContent = '+';
 
     expandButton.addEventListener('click', () => {
-      articleDiv.classList.toggle('article-open');
+      article.classList.toggle('article-open');
     });
 
     return article;
@@ -70,3 +70,29 @@ const articleDiv = document.querySelector('.articles');
     articleDiv.appendChild(articleElem);
   });
 
+const newArticle1 = articleMaker({
+  title: 'Breaking News! Your keys are Lost?',
+
+  date: 'December 1st, 2021',
+
+  firstParagraph: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Dictumst quisque sagittis purus sit amet volutpat consequat mauris nunc. Metus vulputate eu scelerisque felis. Diam vel quam elementum pulvinar etiam. Viverra orci sagittis eu volutpat.',
+
+  secondParagraph: 'Ultricies mi quis hendrerit dolor. Habitant morbi tristique senectus et netus. Ac auctor augue mauris augue neque. Egestas fringilla phasellus faucibus scelerisque eleifend donec pretium vulputate sapien. Senectus et netus et malesuada fames. Fermentum odio eu feugiat pretium.',
+
+  thirdParagraph: 'Eget egestas purus viverra accumsan in nisl nisi. Netus et malesuada fames ac turpis egestas maecenas. Mauris vitae ultricies leo integer malesuada nunc vel risus commodo. Pulvinar elementum integer enim neque volutpat ac tincidunt vitae semper. Est placerat in egestas erat imperdiet.',
+});
+
+const newArticle2 = articleMaker({
+  title: 'This is not the news?',
+
+  date: 'October 1st, 2021',
+
+  firstParagraph: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Dictumst quisque sagittis purus sit amet volutpat consequat mauris nunc. Metus vulputate eu scelerisque felis. Diam vel quam elementum pulvinar etiam.',
+
+  secondParagraph: 'Ultricies mi quis hendrerit dolor. Habitant morbi tristique senectus et netus. Ac auctor augue mauris augue neque. Egestas fringilla phasellus faucibus scelerisque eleifend donec pretium vulputate sapien. Senectus et netus et malesuada fames. Fermentum odio eu feugiat pretium. Vel eros donec ac odio tempor orci dapibus ultrices in. Lorem sed risus ultricies tristique nulla. Dolor sit amet consectetur adipiscing elit.',
+
+  thirdParagraph: 'Eget egestas purus viverra accumsan in nisl nisi. Netus et malesuada fames ac turpis egestas maecenas. Mauris vitae ultricies leo integer malesuada nunc vel risus commodo. Pulvinar elementum integer enim neque volutpat ac tincidunt vitae semper. Est placerat in egestas erat imperdiet. Odio aenean sed adipiscing diam donec adipiscing tristique risus nec.',
+});
+
+articleDiv.appendChild(newArticle1);
+articleDiv.appendChild(newArticle2);
