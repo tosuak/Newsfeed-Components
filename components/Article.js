@@ -3,7 +3,7 @@
 // You can read about ES6 modules here: https://exploringjs.com/es6/ch_modules.html#sec_basics-of-es6-modules
 import articleData from './articleData';
 // console.log(articleData);
-const {title, date, firstParagraph, secondParagraph, thirdParagraph} = articleData;
+
 /*
   Step 1: Write a component called 'articleMaker' to create an article.
   Your component is a function that takes an article object as its only argument,
@@ -64,11 +64,15 @@ const articleDiv = document.querySelector('.articles');
 
     return article;
   }    
-  
-  articleData.forEach(elem => {
-    const articleElem = articleMaker(elem);
-    articleDiv.appendChild(articleElem);
-  });
+
+ const articleElements = articleData.map(data => {
+   return articleMaker(data);
+ })
+
+ articleElements.forEach(elem => {
+   articleDiv.appendChild(elem);
+ })
+
 
 const newArticle1 = articleMaker({
   title: 'Breaking News! Your keys are Lost?',
