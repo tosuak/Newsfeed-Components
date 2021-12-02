@@ -29,7 +29,7 @@ import articleData from './articleData';
   Step 5: Try adding new article object to the data array. Make sure it is in the same format as the others.
   Refresh the page to see the new article.
 */
-const articleDiv = document.querySelector('.articles');
+const articleDiv = document.querySelector('div.articles');
 
  function articleMaker (obj) {
     const article = document.createElement('div');
@@ -65,12 +65,8 @@ const articleDiv = document.querySelector('.articles');
     return article;
   }    
 
- const articleElements = articleData.map(data => {
-   return articleMaker(data);
- })
-
- articleElements.forEach(elem => {
-   articleDiv.appendChild(elem);
+ articleData.forEach(elem => {
+   articleDiv.appendChild(articleMaker(elem));
  })
 
 
